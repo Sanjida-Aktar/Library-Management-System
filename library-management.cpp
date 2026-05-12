@@ -29,9 +29,8 @@ class Accademic_Book : public Book{
     public:
     Accademic_Book();
 
-    void set_inputBook() override {
-       cout<< "Enter Book ID, Title, Author, Subject, Semester: ";
-         cin >> bookid >> title >> author >> subject >> semester;
+    void set_inputBook(int id,string t, string a, string s int semester): Book(id,t,a) {
+
     }
 
     void display() override {
