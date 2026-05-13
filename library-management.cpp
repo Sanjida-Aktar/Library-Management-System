@@ -29,8 +29,9 @@ class Accademic_Book : public Book{
     public:
     Accademic_Book();
 
-    void set_inputBook(int id,string t, string a, string s int semester): Book(id,t,a) {
-
+    void set_inputBook(int id,string t, string a, string s, int semester): Book(id,t,a) {
+        this->subject = s;
+        this->semester = semester;                  
     }
 
     void display() override {
@@ -50,9 +51,11 @@ class Story_Book : public Book{
     public:
     Story_Book();
 
-    void set_input_Book(){
-       cin >> bookid >> title >> author >> genre >> rating;
+    void set_input_Book(string t, string a, string g, int r): Book(0,t,a) {
+        this->genre = g;
+        this->rating = r;
     }
+       
 
     void display() override {
         cout << "Book ID: " << bookid << endl;
